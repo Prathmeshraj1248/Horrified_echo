@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Camera playerCamera;
     public float walkSpeed = 6f;
     public float runSpeed = 12f;
-    public float jumpPower = 7f;
+    public float jumpPower = 15f;
     public float gravity = 10f;
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
         // Gravity
         if (!characterController.isGrounded)
         {
-          //  moveDirection.y -= gravity * Time.deltaTime;
+           moveDirection.y -= gravity * Time.deltaTime;
         }
 
         // Crouch
